@@ -2,13 +2,57 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <title>El Magnifiko</title>
+      <title>Swipe for Initiative</title>
       <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <div class="box">
-        <p class="words">This is a test</p>
+      <h1>🎲 Swipe for Initiative</h1>
+     <section class="profile-creator">
+       <h2>Create Profile</h2>
+       <label>Role</label>
+       <select id="role">
+         <option value="Player">Player</option>
+         <option value="Host">Host</option>
+       </select>
+
+       <label>Game System</label>
+       <select id="game">
+         <option>D&D</option>
+         <option>Pathfinder</option>
+         <option>Warhammer</option>
+         <option>Other</option>
+       </select>
+
+       <label>If Other:</label>
+       <input id="customGame" type="text" placeholder="Your Game Here">
+       <button onclick="createProfile()">Create Profile</button>
+       
+     </section> 
+
+      <hr>
+
+      <section class="filters">
+        <h2>Find Players / Hosts</h2>
+
+        <select id="filterGame">
+          <option value="">All Games</option>
+          <option>D&D</option>
+          <option>Pathfinder</option>
+          <option>Warhammer</option>
+        </select>
+
+        <button onclick="filterProfiles()">Search</button>
+
+      </section>
+      
+        <hr>
+
+      <section>
+        <h2>Results</h2>
+        <div id="results"></div>
+      </section>
+      </section>
+
         
-      </div>
     </body>
   </html>
